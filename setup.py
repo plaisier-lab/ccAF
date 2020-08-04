@@ -24,16 +24,16 @@ from setuptools import setup
 HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
-README = (HERE / "README.md").read_text()
+long_description = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
 setup(
     name="ccAF",
     version="1.0.0",
     description="Classify scRNA-seq profiling with highly resolved cell cycle phases.",
-    long_description=README,
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ccAF",
+    url="https://github.com/plaisier-lab/ccAF",
     author="Christopher Plaisier",
     author_email="plaisier@asu.edu",
     license="GNU General Public License v3.0",

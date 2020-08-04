@@ -3,13 +3,13 @@ The ability to accurately assign a cell cycle phase based on a transcriptome pro
 
 ## Dependencies
 There are four dependencies that must be met for ccAF to classify cell cycle states:
-1. [numpy](https://numpy.org/) - [install](https://numpy.org/install/)
-2. [scipy](https://www.scipy.org/index.html) - [install](https://www.scipy.org/install.html)
-3. [scanpy](https://scanpy.readthedocs.io/en/latest/) - [install](https://scanpy.readthedocs.io/en/latest/installation.html)
-3. [tensorflow](https://www.tensorflow.org/) -[install](https://www.tensorflow.org/install)
+1. [numpy](https://numpy.org/) - ([install](https://numpy.org/install/))
+2. [scipy](https://www.scipy.org/index.html) - ([install](https://www.scipy.org/install.html))
+3. [scanpy](https://scanpy.readthedocs.io/en/latest/) - ([install](https://scanpy.readthedocs.io/en/latest/installation.html))
+3. [tensorflow](https://www.tensorflow.org/) - ([install](https://www.tensorflow.org/install))
 
-**Python dependency installation commands:**
-> **NOTE!** pip may need to be replaced with pip3 depending upon your setup.
+*Python dependency installation commands:*
+> **NOTE!**  pip may need to be replaced with pip3 depending upon your setup.
 
 ```shell
 pip3 install numpy scipy scanpy tensorflow
@@ -40,7 +40,7 @@ This will start the Docker container in interactive mode and will leave you at a
 ## Running ccAF against your scRNA-seq data
 The first step in using ccAF is to import your scRNA-seq profiling data into scanpy. A scanpy data object is the expected input into the ccAF classifier:
 
-```
+```python
 import scanpy
 import ccAF
 
@@ -50,6 +50,8 @@ set1_scanpy = sc.read_loom('data/WT.loom')
 # Predict cell cycle phase labels
 predictedLabels = ccAF.predict_labels(set1_scanpy)
 ```
+
+More complete example is available as [test.py](https://github.com/plaisier-lab/ccAF/blob/master/tests/test.py) on the GitHub page.
 
 ## Contact
 For issues or comments please contact:  [Chris Plaisier](mailto:plaisier@asu.edu)
