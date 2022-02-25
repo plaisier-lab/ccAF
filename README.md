@@ -37,6 +37,9 @@ docker run -it -v '<path to scRNA-seq profiles directory>:/files' cplaisier/ccAF
 
 This will start the Docker container in interactive mode and will leave you at a command prompt. You will then want to change directory to where you have your scRNA-seq or trasncriptome profiling data.
 
+## Gene labels must be in human Gene Ensembl IDs to run ccAF
+The data input into ccAF must use human Ensembl gene IDs (ENSG<#>), whithout the version number. If your data is not currenly labeled with Ensemble gene IDs you may try [mygene](https://docs.mygene.info/projects/mygene-py/en/latest/) or go to the [BioMart](http://uswest.ensembl.org/biomart/martview).
+  
 ## Running ccAF against your scRNA-seq data
 The first step in using ccAF is to import your scRNA-seq profiling data into scanpy. A scanpy data object is the expected input into the ccAF classifier:
 
