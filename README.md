@@ -23,16 +23,16 @@ pip install ccAF
 ```
 
 ## Alternatively use the ccAF Docker container
-We facilitate the use of ccAF by providing a Docker Hub container [cplaisier/ccAF](https://hub.docker.com/r/cplaisier/ccAF) which has all the dependencies and libraries required to run the ccAF classifier. To see how the Docker container is configured plaese refer to the [Dockerfile](https://github.com/plaisier-lab/ccAF/blob/master/Dockerfile). Please [install Docker](https://docs.docker.com/get-docker/) and then from the command line run:
+We facilitate the use of ccAF by providing a Docker Hub container [cplaisier/scrna_seq_velocity](https://hub.docker.com/r/cplaisier/scrna_seq_velocity) which has all the dependencies and libraries required to run the ccAF classifier. To see how the Docker container is configured plaese refer to the [Dockerfile](https://github.com/plaisier-lab/docker_scRNA_seq_velocity/blob/master/Dockerfile). Please [install Docker](https://docs.docker.com/get-docker/) and then from the command line run:
 
 ```shell
-docker pull cplaisier/ccAF
+docker pull cplaisier/scrna_seq_velocity
 ```
 
 Then run the Docker container using the following command (replace <path to scRNA-seq profiles directory> with the directory where you have the scRNA-seq data to be classified):
 
 ```shell
-docker run -it -v '<path to scRNA-seq profiles directory>:/files' cplaisier/ccAF
+docker run -it -v '<path to scRNA-seq profiles directory>:/files' cplaisier/scrna_seq_velocity
 ```
 
 This will start the Docker container in interactive mode and will leave you at a command prompt. You will then want to change directory to where you have your scRNA-seq or trasncriptome profiling data.
